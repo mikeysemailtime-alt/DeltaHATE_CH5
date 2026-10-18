@@ -1,4 +1,7 @@
 <img width="1920" height="1080" alt="results" src="https://github.com/user-attachments/assets/77fef1ef-9f27-4328-89af-f7ab24bbdcf2" />
+<img width="628" height="690" alt="Screenshot 2026-10-18 235601" src="https://github.com/user-attachments/assets/268687b8-98d2-4d54-b7e1-baeaba4842bb" />
+
+
 warning 1 : THIS CODE WAS EDITED BY AI TO ADD CHAPTER 5 FUNCTIONALITY, IT MAY HAVE BUGS, IF THERE ARE LET ME KNOW.
 
 warning 2 : THIS PROGRAM OVERWRITES YOUR DELTARUNE DATA.WIN FILES, THE PROGRAM CREATES A SINGLE BACKUP COPY OF YOUR ORIGINAL DATA.WIN IN THE GAMES FOLDER, ENSURE YOU COPY THIS SOMEWHERE SAFE SO YOU CAN EASILY REPAIR YOUR GAME!
@@ -15,7 +18,8 @@ https://github.com/mike309game/DeltaHATE_GUI
 
 
 
-# Building (v1.6, DELTARUNE chapters 1-5)
+# Building (v1.6, DELTARUNE chapters 1-5)<img width="628" height="690" alt="Screenshot 2026-10-18 235601" src="https://github.com/user-attachments/assets/d4aacecd-ddb2-4173-b536-fccdcc6c4fa2" />
+
 
 Needs the **.NET 10 SDK** (Windows, WPF) because current UndertaleModLib targets .NET 10.
 
@@ -42,5 +46,5 @@ This is basically [this](https://github.com/krzys-h/UndertaleModTool/blob/master
 The only problem is that it doesn't really have a "power meter" so you'll always get crazy results, you may get softlocked by oversized NPC's, I recommend a new save file.
 
 ##IMPORTANT
-In case you get softlocked in a part of the game even when shuffling the game many times, you'd probably want to use a clean data.win of the game to progress beyond that part, the program creates a backup of your original data.win, if you do not copy this file elsewhere, it will be overwritten if you reshuffle your files, so make sure to copy it!
+In case you get softlocked in a part of the game even when shuffling the game many times, you'd probably want to use a clean data.win of the game to progress beyond that part, the program creates a backup of your original data.win, if you do not copy this file elsewhere, it will be overwritten if you reshuffle your data.win file again, so make sure to copy it!
 
