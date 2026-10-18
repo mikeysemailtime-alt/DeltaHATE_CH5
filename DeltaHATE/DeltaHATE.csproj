@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <!-- UndertaleModLib targets net10.0, so the GUI has to as well. Needs the .NET 10 SDK. -->
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <RootNamespace>DeltaHATE</RootNamespace>
+    <AssemblyName>DeltaHATE</AssemblyName>
+    <AssemblyTitle>DeltaHATE</AssemblyTitle>
+    <Version>1.6.0</Version>
+    <Platforms>AnyCPU;x64</Platforms>
+    <ApplicationHighDpiMode>SystemAware</ApplicationHighDpiMode>
+  </PropertyGroup>
+
+  <!--
+    UndertaleModLib (from UndertaleModTool) is referenced as a project, so it is built from source.
+    Put a checkout of https://github.com/UnderminersTeam/UndertaleModTool at <repo root>\UndertaleModTool,
+    or point UtmtDir at wherever yours is:  dotnet build -p:UtmtDir=C:\path\to\UndertaleModTool\
+  -->
+  <PropertyGroup>
+    <UtmtDir Condition="'$(UtmtDir)' == ''">$(MSBuildThisFileDirectory)..\UndertaleModTool\</UtmtDir>
+  </PropertyGroup>
+
+  <Target Name="CheckUtmtPresent" BeforeTargets="PrepareForBuild;ResolveProjectReferences"
+          Condition="!Exists('$(UtmtDir)UndertaleModLib\UndertaleModLib.csproj')">
+    <Error Text="UndertaleModLib not found at '$(UtmtDir)UndertaleModLib'. Clone https://github.com/UnderminersTeam/UndertaleModTool next to the DeltaHATE folder (as 'UndertaleModTool'), or pass -p:UtmtDir=&lt;path to your checkout, with trailing slash&gt;." />
+  </Target>
+
+  <ItemGroup>
+    <ProjectReference Include="$(UtmtDir)UndertaleModLib\UndertaleModLib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- The logo is now compiled into the exe (it used to be loaded from next to it). -->
+    <Resource Include="Resources\deltahate_logo.png" />
+  </ItemGroup>
+
+</Project>

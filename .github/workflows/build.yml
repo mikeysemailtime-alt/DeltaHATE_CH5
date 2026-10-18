@@ -1,0 +1,24 @@
+name: Build exe
+on:
+  workflow_dispatch:
+  push:
+    branches: [ master ]
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: UnderminersTeam/UndertaleModTool
+          path: UndertaleModTool
+          submodules: recursive
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+      - name: Publish single-file exe
+        run: dotnet publish DeltaHATE/DeltaHATE.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -o out
+      - uses: actions/upload-artifact@v4
+        with:
+          name: DeltaHATE-win-x64
+          path: out/
