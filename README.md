@@ -18,7 +18,7 @@ https://github.com/mike309game/DeltaHATE_GUI
 
 
 
-# Building (v1.6, DELTARUNE chapters 1-5)<img width="628" height="690" alt="Screenshot 2026-10-18 235601" src="https://github.com/user-attachments/assets/d4aacecd-ddb2-4173-b536-fccdcc6c4fa2" />
+# Building (v1.6, DELTARUNE chapters 1-5)
 
 
 Needs the **.NET 10 SDK** (Windows, WPF) because current UndertaleModLib targets .NET 10.
