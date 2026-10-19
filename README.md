@@ -41,7 +41,7 @@ DELTARUNE is now a launcher plus one folder per chapter. Load the `data.win` **i
 # DeltaHATE GUI version
 Yet another Deltarune corruptor! (that can corrupt other GameMaker Studio games too!)
 
-This is basically [this](https://github.com/krzys-h/UndertaleModTool/blob/master/UndertaleModTool/SampleScripts/DeltaHATE.csx) script from [UndertaleModTool](https://github.com/krzys-h/UndertaleModTool/) but portted as an standalone program with options.
+This is basically [this](https://github.com/krzys-h/UndertaleModTool/blob/master/UndertaleModTool/SampleScripts/DeltaHATE.csx) script from [UndertaleModTool](https://github.com/krzys-h/UndertaleModTool/) but ported as an standalone program with options.
 
 The only problem is that it doesn't really have a "power meter" so you'll always get crazy results, you may get softlocked by oversized NPC's, I recommend a new save file.
 
